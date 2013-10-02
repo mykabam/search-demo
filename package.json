@@ -1,0 +1,19 @@
+{
+  "name": "mwc-search-demo",
+  "description": "ES based search demo",
+  "version": "0.0.1",
+  "author": "monimus",
+  "engines": {
+    "node": ">= 0.8.16"
+  },
+  "dependencies": {
+    "express": "3.3.1",
+    "jade": "0.27.6",
+    "stylus": "0.30.0",
+    "socket.io": "0.9.10",
+    "mongoose": "3.0.3",
+    "gzippo": "0.1.7",
+    "ws": "0.4.27",
+    "ws-rpc": "0.0.8"
+  }
+}

@@ -1,0 +1,45 @@
+extends bs3-layout
+
+block head 
+  title monimus search demo
+
+block content
+  #main.container
+    .row
+      .col-lg-6
+        .input-group
+          input#search.form-control(type="text")
+          .input-group-btn
+            button.btn.btn-default.dropdown-toggle(type="button", data-toggle="dropdown") 
+              | Action 
+              span.caret &nbsp;
+            ul.dropdown-menu.pull-right
+              li
+                a(href="#") Action
+              li
+                a(href="#") Another action
+              li
+                a(href="#") Something else here
+              li.divider
+              li
+                a(href="#") Separated link
+    .row
+      .col-lg-6
+        p Search by:&nbsp;&nbsp;
+        .btn-toolbar
+          button.btn.btn-default.btn-sm(type="button")
+            span.glyphicon.glyphicon-book
+            | Schools
+          button.btn.btn-default.btn-sm(type="button")
+            span.glyphicon.glyphicon-book
+            | Courses
+          button.btn.btn-default.btn-sm(type="button")
+            span.glyphicon.glyphicon-book
+            | Students
+          button.btn.btn-default.btn-sm(type="button")
+            span.glyphicon.glyphicon-book
+            | Documents
+
+block javascripts
+  script(type="text/javascript", src="/javascripts/thirdparty/typeahead.min.js")
+  script(type="text/javascript", src="/javascripts/app.js")
