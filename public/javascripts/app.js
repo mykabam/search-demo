@@ -89,7 +89,8 @@ jQuery(function($) {
       data[by].forEach(function(r) {
         var $item = $panel.find(".list-group-item.layout").clone();
         $item.removeClass("layout");
-        $item.find("h5").text(r);
+        $item.find("h5").text(r.header);
+        $item.find(".list-group-item-text").text(r.content||"");
         $panel.find(".list-group").append($item);
       });
 
