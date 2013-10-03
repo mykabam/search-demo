@@ -7,38 +7,67 @@ block content
   #main.container
     .row
       .col-lg-6
-        .input-group
+        .input-group.search-input
           input#search.form-control(type="text")
-          .input-group-btn
-            button.btn.btn-default.dropdown-toggle(type="button", data-toggle="dropdown") 
-              | Action 
-              span.caret &nbsp;
-            ul.dropdown-menu.pull-right
-              li
-                a(href="#") Action
-              li
-                a(href="#") Another action
-              li
-                a(href="#") Something else here
-              li.divider
-              li
-                a(href="#") Separated link
-    .row
+          span.input-group-btn
+            button.btn.btn-primary(type="button")
+              span.glyphicon.glyphicon-search
+
+    .row.search-by
       .col-lg-6
-        p Search by:&nbsp;&nbsp;
+        p.search-label Search by:&nbsp;&nbsp;
         .btn-toolbar
-          button.btn.btn-default.btn-sm(type="button")
+          button.btn.btn-primary.btn-sm(type="button")
+            span.glyphicon.glyphicon-tower
+            |  Schools
+          button.btn.btn-primary.btn-sm(type="button")
             span.glyphicon.glyphicon-book
-            | Schools
-          button.btn.btn-default.btn-sm(type="button")
-            span.glyphicon.glyphicon-book
-            | Courses
-          button.btn.btn-default.btn-sm(type="button")
-            span.glyphicon.glyphicon-book
-            | Students
-          button.btn.btn-default.btn-sm(type="button")
-            span.glyphicon.glyphicon-book
-            | Documents
+            |  Courses
+          button.btn.btn-primary.btn-sm(type="button")
+            span.glyphicon.glyphicon-user
+            |  Students
+          button.btn.btn-primary.btn-sm(type="button")
+            span.glyphicon.glyphicon-file
+            |  Documents
+    .row.results
+      .col-lg-8
+        .panel.panel-default.courses-results.hide
+          .panel-heading
+            span.badge.pull-right 10
+            h4 Courses
+          .list-group
+            .list-group-item.layout
+              h5 Result One
+              p.list-group-item-text
+                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        .panel.panel-default.documents-results.hide
+          .panel-heading
+            span.badge.pull-right 10
+            h4 Documents
+          .list-group
+            .list-group-item.layout
+              h5 Result One
+              p.list-group-item-text
+                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        .panel.panel-default.schools-results.hide
+          .panel-heading
+            span.badge.pull-right 10
+            h4 Schools
+          .list-group
+            .list-group-item.layout
+              h5 Result One
+              p.list-group-item-text
+                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        .panel.panel-default.students-results.hide
+          .panel-heading
+            span.badge.pull-right 10
+            h4 Students
+          .list-group
+            .list-group-item.layout
+              h5 Result One
+              p.list-group-item-text
+                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+
 
 block javascripts
   script(type="text/javascript", src="/javascripts/thirdparty/typeahead.min.js")
