@@ -16,6 +16,7 @@
     "ws": "0.4.27",
     "ws-rpc": "0.0.8",
     "superagent": "0.15.4",
-    "underscore": "1.5.2"
+    "underscore": "1.5.2",
+    "date-utils": "1.2.14"
   }
 }

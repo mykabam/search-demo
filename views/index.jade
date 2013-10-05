@@ -29,8 +29,8 @@ block content
           button.btn.btn-primary.btn-sm(type="button")
             span.glyphicon.glyphicon-file
             |  Documents
-    .row.results
-      .col-lg-8
+    .row
+      .col-lg-8.results
         .panel.panel-default.courses-results.hide
           .panel-heading
             span.badge.pull-right 10
@@ -67,7 +67,18 @@ block content
               h5 Result One
               p.list-group-item-text
                 | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-
+      .col-lg-3
+        .panel.panel-default
+          .panel-heading
+            | Search By
+          .panel-body
+            ul
+              each f in ["Courses", "Documents", "Schools", "Students"]
+                li
+                  .checkbox
+                    label
+                      input(type="checkbox")
+                      | #{f}
 
 block javascripts
   script(type="text/javascript", src="/javascripts/thirdparty/typeahead.min.js")
