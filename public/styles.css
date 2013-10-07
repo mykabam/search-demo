@@ -3,6 +3,6 @@ li{display:block}
 #main{margin-top:20px;float:left;padding:20px}
 .search-label{padding-top:4px;float:left}
 .search-by{margin-top:5px}
-.results{margin-top:10px;}
-.results .panel-heading h4{margin:0}
+.search-results{margin-top:10px;}
+.search-results .results .panel-heading h4{margin:0}
 .layout{display:none}

@@ -73,17 +73,19 @@ jQuery(function($) {
 
     var q = $("input#search").val();
     $.get("/search?q="+q+by(), function(data) {
-      renderSearch(data);
+      renderSearch(data.results);
+      renderFacets(data);
     });
   });
 
   // Render search results
-  function renderSearch(data) {
+  function renderSearch(results) {
     $(".results .panel").addClass("hide");
     $(".list-group-item:not(.layout)").remove();
 
-    var results = data.results;
     for(var by in results) {
+      if(!results[by].length) { continue; }
+      
       var $panel = $("."+by+"-results");
       $panel.find(".panel-heading .badge").text(results[by].length);
 
@@ -96,6 +98,33 @@ jQuery(function($) {
       });
 
       $panel.removeClass("hide");
+    }
+  }
+
+  function renderFacets(data) {
+    var facets = data.facets;
+
+    $(".facet_item:not(.layout)").remove();
+
+    for(var type in facets) {
+      var $panel = $(".panel."+type+"_facets");
+      $panel.addClass("hide");
+
+      if(!data.results[type].length) { break; }
+
+      $panel.removeClass("hide");
+
+      for(var filter in facets[type]) {  
+        facets[type][filter].forEach(function(item) {
+          var $ul = $panel.find("ul."+filter);
+          var $item = $ul.find("li.layout").clone();
+          $item.removeClass("layout");
+          $item.find(".f_label").text(item.label||item.term);
+          $item.find(".count").text("("+item.count+")");
+
+          $ul.append($item);
+        });
+      }
     }
   }
 

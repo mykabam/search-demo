@@ -29,55 +29,48 @@ block content
           button.btn.btn-primary.btn-sm(type="button")
             span.glyphicon.glyphicon-file
             |  Documents
-    .row
+    .row.search-results
       .col-lg-3
-        .panel.panel-default.hide
-          .panel-heading
-            | Search By
-          .panel-body
-            ul
-              each f in ["Courses", "Documents", "Schools", "Students"]
-                li
-                  .checkbox
-                    label
-                      input(type="checkbox")
-                      | #{f}
-        .panel.panel-default
+        .panel.panel-default.courses_facets.hide
           .panel-heading
             | Courses
           .panel-body
             h5 Start Date
-            ul
-              each f in ["Courses", "Documents", "Schools", "Students"]
-                li
-                  .checkbox
-                    label
-                      input(type="checkbox")
-                      | #{f}
+            ul.start_date
+              li.facet_item.layout
+                .checkbox
+                  label
+                    input(type="checkbox")
+                    span.f_label Hola
+                    span &nbsp;
+                    span.count (10)
             h5 Price
-            ul
-              each f in ["Courses", "Documents", "Schools", "Students"]
-                li
-                  .checkbox
-                    label
-                      input(type="checkbox")
-                      | #{f}
+            ul.price
+              li.facet_item.layout
+                .checkbox
+                  label
+                    input(type="checkbox")
+                    span.f_label Hola
+                    span &nbsp;
+                    span.count (10)
             h5 Category
-            ul
-              each f in ["Courses", "Documents", "Schools", "Students"]
-                li
-                  .checkbox
-                    label
-                      input(type="checkbox")
-                      | #{f}
+            ul.categories
+              li.facet_item.layout
+                .checkbox
+                  label
+                    input(type="checkbox")
+                    span.f_label Hola
+                    span &nbsp;
+                    span.count (10)
             h5 School
-            ul
-              each f in ["Courses", "Documents", "Schools", "Students"]
-                li
-                  .checkbox
-                    label
-                      input(type="checkbox")
-                      | #{f}
+            ul.school
+              li.facet_item.layout
+                .checkbox
+                  label
+                    input(type="checkbox")
+                    span.f_label Hola
+                    span &nbsp;
+                    span.count (10)
       .col-lg-8.results
         .panel.panel-default.courses-results.hide
           .panel-heading
