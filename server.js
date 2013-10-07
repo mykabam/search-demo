@@ -39,12 +39,8 @@ app.configure('development', function() {
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
 });
 
-app.configure('production', function(){
+app.configure('production', function() {
   app.use(express.errorHandler());
-});
-
-app.get('/', function(req, res) {
-	res.render('index');
 });
 
 require("./lib/search")(app);

@@ -30,6 +30,54 @@ block content
             span.glyphicon.glyphicon-file
             |  Documents
     .row
+      .col-lg-3
+        .panel.panel-default.hide
+          .panel-heading
+            | Search By
+          .panel-body
+            ul
+              each f in ["Courses", "Documents", "Schools", "Students"]
+                li
+                  .checkbox
+                    label
+                      input(type="checkbox")
+                      | #{f}
+        .panel.panel-default
+          .panel-heading
+            | Courses
+          .panel-body
+            h5 Start Date
+            ul
+              each f in ["Courses", "Documents", "Schools", "Students"]
+                li
+                  .checkbox
+                    label
+                      input(type="checkbox")
+                      | #{f}
+            h5 Price
+            ul
+              each f in ["Courses", "Documents", "Schools", "Students"]
+                li
+                  .checkbox
+                    label
+                      input(type="checkbox")
+                      | #{f}
+            h5 Category
+            ul
+              each f in ["Courses", "Documents", "Schools", "Students"]
+                li
+                  .checkbox
+                    label
+                      input(type="checkbox")
+                      | #{f}
+            h5 School
+            ul
+              each f in ["Courses", "Documents", "Schools", "Students"]
+                li
+                  .checkbox
+                    label
+                      input(type="checkbox")
+                      | #{f}
       .col-lg-8.results
         .panel.panel-default.courses-results.hide
           .panel-heading
@@ -67,18 +115,6 @@ block content
               h5 Result One
               p.list-group-item-text
                 | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-      .col-lg-3
-        .panel.panel-default
-          .panel-heading
-            | Search By
-          .panel-body
-            ul
-              each f in ["Courses", "Documents", "Schools", "Students"]
-                li
-                  .checkbox
-                    label
-                      input(type="checkbox")
-                      | #{f}
 
 block javascripts
   script(type="text/javascript", src="/javascripts/thirdparty/typeahead.min.js")

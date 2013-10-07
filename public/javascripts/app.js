@@ -82,11 +82,12 @@ jQuery(function($) {
     $(".results .panel").addClass("hide");
     $(".list-group-item:not(.layout)").remove();
 
-    for(var by in data) {
+    var results = data.results;
+    for(var by in results) {
       var $panel = $("."+by+"-results");
-      $panel.find(".panel-heading .badge").text(data[by].length);
+      $panel.find(".panel-heading .badge").text(results[by].length);
 
-      data[by].forEach(function(r) {
+      results[by].forEach(function(r) {
         var $item = $panel.find(".list-group-item.layout").clone();
         $item.removeClass("layout");
         $item.find("h5").text(r.header);
