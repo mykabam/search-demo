@@ -18,6 +18,9 @@
     "superagent": "0.15.4",
     "underscore": "1.5.2",
     "date-utils": "1.2.14",
-    "elasticsearchclient": "~0.5.3"
+    "elasticsearchclient": "git+https://github.com/santiago/node-elasticsearch-client.git"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
