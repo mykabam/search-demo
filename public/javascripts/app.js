@@ -101,7 +101,7 @@ jQuery(function($) {
 
     var query = (function() {
       return Object.keys(filters).map(function(f) {
-        return f+"="+JSON.stringify(filters[f]);
+        return f+"="+JSON.stringify(filters[f]).replace(/\&/, "__and__");
       }).join("&");
     })();
 
