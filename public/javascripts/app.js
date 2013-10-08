@@ -60,10 +60,7 @@ jQuery(function($) {
   });
 
   // When an option is selected
-  $("#search").on("typeahead:selected", function(e, a) {
-    console.log(e);
-    console.log(a);
-    console.log("here");
+  $("#search").on("typeahead:selected", function(e) {
   });
 
   // Click on search button 
@@ -78,8 +75,15 @@ jQuery(function($) {
     });
   });
 
+  // Press Enter to search
+  $(".search-input").keypress(function (e) {
+    // e.preventDefault();
+    if (e.which == 13) {
+      $(".search-input .btn").click();
+    }
+  });
+
   function filteredSearch(doctype) {
-    console.log("checked");
     var checked = [];
     var filters = {};
     $(".facet-item input[type=checkbox]:checked").each(function() {
