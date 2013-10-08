@@ -1,3 +1,4 @@
+p{margin:0}
 ul{padding:0}
 li{display:block}
 #main{margin-top:20px;float:left;padding:20px}
@@ -6,3 +7,5 @@ li{display:block}
 .search-results{margin-top:10px;}
 .search-results .results .panel-heading h4{margin:0}
 .layout{display:none}
+.list-group .filters{font-size:12px;margin-top:5px}
+.list-group p.price,.list-group p.start_date{float:left}

@@ -136,6 +136,9 @@ jQuery(function($) {
         $item.removeClass("layout");
         $item.find("h5").text(r.header);
         $item.find(".list-group-item-text").text(r.content||"");
+        $item.find(".filters .start_date_value").text(r.start_date);
+        $item.find(".filters .price_value").text("$"+r.price);
+        $item.find(".filters .categories_value").text(r.categories);
         $panel.find(".list-group").append($item);
       });
 
