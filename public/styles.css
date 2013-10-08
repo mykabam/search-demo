@@ -1,11 +1,14 @@
 p{margin:0}
 ul{padding:0}
 li{display:block}
-#main{margin-top:20px;float:left;padding:20px}
+#main{margin-top:20px;float:left;padding:20px;padding-top:10px}
 .search-label{padding-top:4px;float:left}
-.search-by{margin-top:5px}
-.search-results{margin-top:10px;}
 .search-results .results .panel-heading h4{margin:0}
 .layout{display:none}
 .list-group .filters{font-size:12px;margin-top:5px}
 .list-group p.price,.list-group p.start_date{float:left}
+.search-input{margin-top:7px;margin-right:10px;float:right;}
+.search-input .input-group{float:right}
+.search-input input#search{background-color:#fff !important;width:400px}
+.search-input .input-group-addon{border-right:0;font-size:12px}
+.tt-dropdown-menu{left:auto !important}

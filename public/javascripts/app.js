@@ -56,7 +56,7 @@ jQuery(function($) {
   $("#search").typeahead({
     name: "Search",
     remote: "/search/autocomplete?q=%QUERY"+by(),
-    limit: 20
+    limit: 12
   });
 
   // When an option is selected
@@ -67,6 +67,9 @@ jQuery(function($) {
   $(".search-input .btn").click(function(e) {
     e.preventDefault();
     $(this).blur();
+
+    // Hide dropdown
+    $(".tt-dropdown-menu").hide();
 
     var q = $("input#search").val();
     $.get("/search?q="+q+by(), function(data) {
