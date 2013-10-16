@@ -33,6 +33,28 @@ html(lang='en')
   body
     .navbar.navbar-inverse.navbar-fixed-top
       a.navbar-brand(href='#') monimus
+      .row
+        .col-lg-6.search-input
+          .input-group
+            span.input-group-addon
+              p Search by: 
+            span.input-group-addon
+              input(type="checkbox", checked="checked", doctype="courses")
+              |  Courses
+            span.input-group-addon
+              input(type="checkbox", checked="checked", doctype="documents")
+              |  Documents
+            span.input-group-addon
+              input(type="checkbox", checked="checked", doctype="schools")
+              |  Schools
+            span.input-group-addon
+              input(type="checkbox", checked="checked", doctype="students")
+              |  Students
+            input#search.form-control(type="text")
+            span.input-group-btn
+              button.btn.btn-primary(type="button")
+                span.glyphicon.glyphicon-search
+
 
     block content
     script(type="text/javascript", src="/javascripts/thirdparty/jquery/jquery-1.8.min.js")
