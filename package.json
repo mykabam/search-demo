@@ -13,7 +13,7 @@
     "socket.io": "0.9.10",
     "mongoose": "3.0.3",
     "gzippo": "0.1.7",
-    "ws": "0.4.27",
+    "ws": "0.8.1",
     "ws-rpc": "0.0.8",
     "superagent": "0.15.4",
     "underscore": "1.5.2",
