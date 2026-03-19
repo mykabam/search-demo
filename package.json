@@ -7,16 +7,16 @@
     "node": ">= 0.8.16"
   },
   "dependencies": {
-    "express": "3.3.1",
+    "express": "4.22.0",
     "jade": "0.27.6",
     "stylus": "0.30.0",
-    "socket.io": "0.9.10",
-    "mongoose": "3.0.3",
+    "socket.io": "2.5.0",
+    "mongoose": "6.13.6",
     "gzippo": "0.1.7",
-    "ws": "0.4.27",
+    "ws": "1.1.5",
     "ws-rpc": "0.0.8",
-    "superagent": "0.15.4",
-    "underscore": "1.5.2",
+    "superagent": "10.2.2",
+    "underscore": "1.13.8",
     "date-utils": "1.2.14",
     "elasticsearchclient": "git+https://github.com/santiago/node-elasticsearch-client.git"
   },
